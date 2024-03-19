@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tipcalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <VerticalStackLayout
+                Padding="0,0"
+                Spacing="5">
+
+                <Label 
+                Text="Valor da gorjeta"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"/>
+
+                <Entry
+                 x:Name="ValueEntry"
+                 Placeholder="Digite o valor do pedido"/>
+
+                <HorizontalStackLayout
+                 Padding="0,0"
+                 Spacing="5">
+
+                <Label Text="Tip"/>
+                <Label Text="0.00" x:Name="LabelTipValue"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout
+                    Padding="0,0"
+                    Spacing="5">
+                <Label Text="Total"/>
+                <Label Text="0.00" x:Name="LabelTotalValue"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout
+                    Padding="0,0"
+                    Spacing="5">
+
+                    <Label Text="Tip percentage"/>
+                    <Label Text="0.00" x:Name="LabelTipPercentage"/>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+
+            <Slider
+                x:Name="SliderTipPercent"
+                Minimum="0"
+                Maximum="100"
+                ValueChanged="SliderTipPercent_ValueChanged"/>
+            
+            <HorizontalStackLayout Spacing="6">
+
+                <Button Padding="327,0"
+                x:Name="Button15Percent"
+                Text="15%"
+                HorizontalOptions="Fill"
+                Clicked="OnButton15PercentClicked"/>
+
+                <Button Padding="320,0"
+                x:Name="Button20Percent"
+                Text="20%"
+                HorizontalOptions="Fill"
+                Clicked="OnButton20PercentClicked"/>
+                
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="5">
+
+                <Button Padding="300,0"
+                x:Name="ButtonRoundDown"
+                Text="Round Down"
+                HorizontalOptions="Start"
+                Clicked="OnButtonRoundDownClicked"/>
+
+            <Button Padding="300,0"
+                x:Name="ButtonRoundUp"
+                Text="Round Up"
+                HorizontalOptions="End"
+                Clicked="OnButtonRoundDownClicked"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+        
+
+</ContentPage>
